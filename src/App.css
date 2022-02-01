@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -15,7 +20,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,40 +41,83 @@
     transform: rotate(360deg);
   }
 }
+.main-container {
+  display: flex;
+}
+main {
+  padding: 10px;
+}
+
+.title {
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+}
 
 /* Sidebar */
 .sidebar {
-  background: #000;
-  max-width: 200px;
+  background: rgb(0, 7, 61);
   color: white;
   height: 100vh;
-  padding: 10px;
 }
+
 .top_section {
   display: flex;
   align-items: center;
-  margin: 10px 0;
   justify-content: space-between;
+  padding: 15px 10px;
 }
 .logo {
+  font-size: 18px;
+  line-height: 0;
+}
+.bars {
+  width: 30px;
+}
+.hide {
+  display: none;
 }
 
 .search {
   display: flex;
-  gap: 10px;
   align-items: center;
+  margin: 10px 0;
+  height: 30px;
+  padding: 10px;
 }
 .search input {
-  width: 160px;
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  background: rgb(238, 238, 238);
+
+  color: white;
 }
+
 .routes {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 5px;
 }
 .link {
   display: flex;
   color: white;
   gap: 10px;
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.link:hover {
+  border-right: 4px solid white;
+  background: rgb(45, 51, 89);
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.active {
+  border-right: 4px solid white;
+  background: rgb(45, 51, 89);
+}
+.link_text {
+  white-space: nowrap;
+  font-size: 15px;
 }
