@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+/* Sidebar */
+.sidebar {
+  background: #000;
+  max-width: 200px;
+  color: white;
+  height: 100vh;
+  padding: 10px;
+}
+.top_section {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+.logo {
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.search input {
+  width: 160px;
+}
+.routes {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.link {
+  display: flex;
+  color: white;
+  gap: 10px;
+}
