@@ -58,14 +58,14 @@ const SideBar = ({ children }) => {
       width: 0,
       padding: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.2,
       },
     },
     show: {
       width: "140px",
       padding: "5px 15px",
       transition: {
-        duration: 0.5,
+        duration: 0.2,
       },
     },
   };
@@ -93,7 +93,7 @@ const SideBar = ({ children }) => {
         <motion.div
           animate={{
             width: isOpen ? "200px" : "45px",
-            transition: { duration: 0.5 },
+            transition: { duration: 0.5, type: "spring", damping: 10 },
           }}
           className={`sidebar `}
         >
