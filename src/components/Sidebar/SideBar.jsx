@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { FaBars, FaHome, FaUser } from "react-icons/fa";
+import { FaBars, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
 import { BiAnalyse, BiSearch } from "react-icons/bi";
 import { BiCog } from "react-icons/bi";
@@ -7,6 +7,7 @@ import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
 import { BsCartCheck } from "react-icons/bs";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import SidebarMenu from "./SidebarMenu";
 const routes = [
   {
     path: "/",
@@ -39,14 +40,32 @@ const routes = [
     icon: <BsCartCheck />,
   },
   {
-    path: "/saved",
-    name: "Saved",
-    icon: <AiFillHeart />,
-  },
-  {
     path: "/settings",
     name: "Settings",
     icon: <BiCog />,
+    exact: true,
+    subRoutes: [
+      {
+        path: "/settings/profile",
+        name: "Profile ",
+        icon: <FaUser />,
+      },
+      {
+        path: "/settings/2fa",
+        name: "2FA",
+        icon: <FaLock />,
+      },
+      {
+        path: "/settings/billing",
+        name: "Billing",
+        icon: <FaMoneyBill />,
+      },
+    ],
+  },
+  {
+    path: "/saved",
+    name: "Saved",
+    icon: <AiFillHeart />,
   },
 ];
 
@@ -93,7 +112,12 @@ const SideBar = ({ children }) => {
         <motion.div
           animate={{
             width: isOpen ? "200px" : "45px",
-            transition: { duration: 0.5, type: "spring", damping: 10 },
+
+            transition: {
+              duration: 0.5,
+              type: "spring",
+              damping: 10,
+            },
           }}
           className={`sidebar `}
         >
@@ -135,6 +159,17 @@ const SideBar = ({ children }) => {
           </div>
           <section className="routes">
             {routes.map((route, index) => {
+              if (route.subRoutes) {
+                return (
+                  <SidebarMenu
+                    setIsOpen={setIsOpen}
+                    route={route}
+                    showAnimation={showAnimation}
+                    isOpen={isOpen}
+                  />
+                );
+              }
+
               return (
                 <NavLink
                   to={route.path}
