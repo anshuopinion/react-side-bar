@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
-import { FaAngleDown, FaArrowAltCircleDown, FaArrowDown } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const menuAnimation = {
@@ -49,7 +49,6 @@ const SidebarMenu = ({ route, showAnimation, isOpen, setIsOpen }) => {
   }, [isOpen]);
   return (
     <>
-      {" "}
       <div className="menu" onClick={toggleMenu}>
         <div className="menu_item">
           <div className="icon">{route.icon}</div>
