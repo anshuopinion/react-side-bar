@@ -1,5 +1,9 @@
-const Saved = () => {
-  return <div className="title"> Saved</div>;
-};
+import React from 'react'
 
-export default Saved;
+const Saved = () => {
+  return (
+    <div>Saved</div>
+  )
+}
+
+export default Saved

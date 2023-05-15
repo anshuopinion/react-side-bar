@@ -1,5 +1,9 @@
-const Users = () => {
-  return <div className="title"> Users</div>;
-};
+import React from 'react'
 
-export default Users;
+const Users = () => {
+  return (
+    <div>Users</div>
+  )
+}
+
+export default Users

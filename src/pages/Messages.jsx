@@ -1,5 +1,9 @@
-const Messages = () => {
-  return <div className="title"> Messages</div>;
-};
+import React from 'react'
 
-export default Messages;
+const Messages = () => {
+  return (
+    <div>Messages</div>
+  )
+}
+
+export default Messages

@@ -1,5 +1,9 @@
-const Analytics = () => {
-  return <div className="title"> Analytics</div>;
-};
+import React from 'react'
 
-export default Analytics;
+const Analytics = () => {
+  return (
+    <div>Analytics</div>
+  )
+}
+
+export default Analytics

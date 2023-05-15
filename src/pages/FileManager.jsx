@@ -1,5 +1,9 @@
-const FileManager = () => {
-  return <div className="title"> File Manager</div>;
-};
+import React from 'react'
 
-export default FileManager;
+const FileManager = () => {
+  return (
+    <div>FileManager</div>
+  )
+}
+
+export default FileManager

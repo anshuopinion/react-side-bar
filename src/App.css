@@ -9,13 +9,10 @@
 }
 main {
   padding: 10px;
+  padding-left: 15px;
+  width: 84vw;
 }
 
-.title {
-  font-size: 3rem;
-  display: grid;
-  place-items: center;
-}
 
 /* Sidebar */
 .sidebar {
@@ -33,28 +30,13 @@ main {
 .logo {
   font-size: 18px;
   line-height: 0;
+  padding-top: 13px;
 }
 .bars {
   width: 30px;
 }
 .hide {
   display: none;
-}
-
-.search {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-  height: 30px;
-  padding: 10px;
-}
-.search input {
-  border: none;
-  margin-left: 10px;
-  border-radius: 5px;
-  background: rgb(238, 238, 238);
-
-  color: white;
 }
 
 .routes {
@@ -77,7 +59,7 @@ main {
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 .active {
-  border-right: 4px solid white;
+  /* border-right: 4px solid white; */
   background: rgb(45, 51, 89);
 }
 .link_text {

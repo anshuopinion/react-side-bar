@@ -1,5 +1,9 @@
-const Setting = () => {
-  return <div className="title"> Setting</div>;
-};
+import React from 'react'
 
-export default Setting;
+const Setting = () => {
+  return (
+    <div>Setting</div>
+  )
+}
+
+export default Setting

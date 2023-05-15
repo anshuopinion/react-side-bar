@@ -1,5 +1,9 @@
-const Order = () => {
-  return <div className="title"> Order</div>;
-};
+import React from 'react'
 
-export default Order;
+const Order = () => {
+  return (
+    <div>Order</div>
+  )
+}
+
+export default Order
